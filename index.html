@@ -710,16 +710,13 @@
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
-            // Prepare email template parameters
+            // Prepare email template parameters (simplified)
             const templateParams = {
-                to_email: 'seed@skytech.international',
                 from_name: data.name,
                 from_email: data.email,
                 company: data.company,
                 role: data.role,
-                interest: data.interest || 'Not specified',
-                subject: `SKY AI Demo Request - ${data.company} (${data.role})`,
-                submission_date: new Date().toLocaleString(),
+                message: data.interest || 'Not specified',
                 reply_to: data.email
             };
             
