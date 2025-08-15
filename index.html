@@ -9,6 +9,11 @@
     })(window,document,'script','dataLayer','GTM-T2WD2J6B');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- Initialize dataLayer properly -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SKY AI - The first truly autonomous AI platform with 6 patent-pending technologies for the $35B AI agent economy.">
@@ -724,15 +729,15 @@
                     console.log('Email sent successfully:', response);
                     
                     // GTM Event Tracking for successful submission
-                    if (typeof dataLayer !== 'undefined') {
-                        dataLayer.push({
-                            'event': 'form_submit_success',
-                            'event_category': 'engagement',
-                            'event_label': 'demo_request',
-                            'company': data.company,
-                            'role': data.role
-                        });
-                    }
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'form_submit_success',
+                        'event_category': 'engagement',
+                        'event_label': 'demo_request',
+                        'company': data.company,
+                        'role': data.role,
+                        'form_name': 'demo_request_form'
+                    });
                     
                     // Show success message
                     successMsg.innerHTML = `
@@ -756,13 +761,13 @@
                     console.error('Email send failed:', error);
                     
                     // GTM Event Tracking for failed submission
-                    if (typeof dataLayer !== 'undefined') {
-                        dataLayer.push({
-                            'event': 'form_submit_error',
-                            'event_category': 'error',
-                            'event_label': 'demo_request_failed'
-                        });
-                    }
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'form_submit_error',
+                        'event_category': 'error',
+                        'event_label': 'demo_request_failed',
+                        'error_type': 'email_service_error'
+                    });
                     
                     // Show error message with fallback
                     successMsg.innerHTML = `
