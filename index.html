@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T2WD2J6B');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SKY AI - The first truly autonomous AI platform with 6 patent-pending technologies for the $35B AI agent economy.">
+    <meta name="keywords" content="autonomous AI, artificial intelligence, AI agents, patent-pending technology, AI platform">
     <title>SKY AI - The First Truly Autonomous AI Platform</title>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary-blue: #1a237e;
+            --secondary-blue: #2196f3;
+            --accent-blue: #64b5f6;
+            --success-green: #4caf50;
+            --success-green-hover: #45a049;
+            --text-white: #ffffff;
+            --text-light: rgba(255, 255, 255, 0.9);
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,10 +43,11 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a237e 0%, #2196f3 100%);
-            color: white;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--text-white);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
         .container {
@@ -27,6 +59,7 @@
         header {
             padding: 20px 0;
             position: relative;
+            z-index: 100;
         }
 
         nav {
@@ -37,135 +70,106 @@
 
         .logo {
             font-size: 2rem;
-            font-weight: bold;
-            color: white;
+            font-weight: 800;
+            color: var(--text-white);
+            letter-spacing: -0.02em;
         }
 
         .patent-badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
-            border-radius: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 25px;
             font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 500;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .patent-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
         }
 
         .hero {
             text-align: center;
-            padding: 80px 0;
+            padding: 100px 0 120px;
             position: relative;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.2;
+            font-size: 4rem;
+            margin-bottom: 24px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero .tagline {
             font-size: 1.5rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 400;
+            color: var(--text-light);
         }
 
         .hero .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 50px;
+            font-size: 1.1rem;
+            margin-bottom: 60px;
             opacity: 0.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
         }
 
-        .patent-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .cta-buttons {
+            display: flex;
             gap: 20px;
-            margin: 60px 0;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
         }
 
-        .patent-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .patent-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .patent-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #64b5f6;
-        }
-
-        .patent-card p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        .patent-number {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-top: 10px;
-            font-family: monospace;
-        }
-
-        .demo-section {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 60px 0;
-            text-align: center;
-            margin: 60px 0;
-            border-radius: 20px;
-        }
-
-        .demo-form {
-            max-width: 500px;
-            margin: 40px auto 0;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 15px;
+        .btn {
+            padding: 16px 32px;
             border: none;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
+            border-radius: 12px;
             font-size: 1rem;
-        }
-
-        input::placeholder, textarea::placeholder {
-            color: #666;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-primary {
-            background: #4caf50;
+            background: var(--success-green);
             color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            width: 100%;
         }
 
         .btn-primary:hover {
-            background: #45a049;
+            background: var(--success-green-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid var(--glass-border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--glass-bg);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
         }
 
         .stats {
@@ -177,58 +181,192 @@
         }
 
         .stat {
-            padding: 20px;
+            padding: 30px 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #64b5f6;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent-blue);
             display: block;
+            line-height: 1;
         }
 
         .stat-label {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-white);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
             opacity: 0.8;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .patent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+
+        .patent-card {
+            background: var(--glass-bg);
+            padding: 40px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .patent-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--secondary-blue));
+        }
+
+        .patent-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .patent-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .patent-card p {
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .patent-number {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            font-family: 'SF Mono', Monaco, monospace;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .demo-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 80px 0;
+            text-align: center;
+            margin: 100px 0;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            position: relative;
+        }
+
+        .demo-form {
+            max-width: 500px;
+            margin: 50px auto 0;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #666;
+        }
+
+        .btn-form {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.1rem;
             margin-top: 10px;
         }
 
         footer {
             text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 80px;
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 100px;
+            background: rgba(0, 0, 0, 0.1);
         }
 
         .contact-info {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            font-size: 1rem;
         }
 
         .contact-info a {
-            color: #64b5f6;
+            color: var(--accent-blue);
             text-decoration: none;
+            font-weight: 500;
         }
 
         .contact-info a:hover {
             text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .tagline {
-                font-size: 1.2rem;
-            }
-
-            .patent-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         .floating-elements {
@@ -239,47 +377,169 @@
             height: 100%;
             pointer-events: none;
             overflow: hidden;
+            z-index: -1;
         }
 
         .floating-circle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            animation: float 6s ease-in-out infinite;
+            background: var(--glass-bg);
+            animation: float 8s ease-in-out infinite;
+            backdrop-filter: blur(5px);
         }
 
         .floating-circle:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 20%;
-            left: 10%;
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: 8%;
             animation-delay: 0s;
         }
 
         .floating-circle:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
+            width: 80px;
+            height: 80px;
+            top: 50%;
+            right: 10%;
+            animation-delay: 3s;
         }
 
         .floating-circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+
+        .floating-circle:nth-child(4) {
+            width: 60px;
+            height: 60px;
+            top: 30%;
+            right: 25%;
+            animation-delay: 1.5s;
+        }
+
+        .floating-circle:nth-child(5) {
             width: 100px;
             height: 100px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 4s;
+            bottom: 40%;
+            right: 5%;
+            animation-delay: 4.5s;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+                opacity: 0.3;
+            }
+            33% { 
+                transform: translateY(-30px) rotate(120deg); 
+                opacity: 0.6;
+            }
+            66% { 
+                transform: translateY(-15px) rotate(240deg); 
+                opacity: 0.4;
+            }
+        }
+
+        .success-message {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            color: #4caf50;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .patent-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .demo-section {
+                margin: 60px 0;
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2WD2J6B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="floating-elements">
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
         <div class="floating-circle"></div>
         <div class="floating-circle"></div>
         <div class="floating-circle"></div>
@@ -300,6 +560,11 @@
                 <h1>The First Truly Autonomous AI Platform</h1>
                 <p class="tagline">Building Infrastructure for the $35B AI Agent Economy</p>
                 <p class="subtitle">6 Patent-Pending Technologies • Emotional Intelligence • Executive Autonomy • Multi-Level Safety</p>
+                
+                <div class="cta-buttons">
+                    <a href="#demo" class="btn btn-primary">Request Demo</a>
+                    <a href="#patents" class="btn btn-secondary">View Patents</a>
+                </div>
             </div>
         </section>
 
@@ -323,66 +588,83 @@
                 </div>
             </div>
 
-            <div class="patent-grid">
-                <div class="patent-card">
-                    <h3>Emotional Intelligence & Learning</h3>
-                    <p>Patent-pending system for persistent emotional memory and statistical confidence analysis that enables AI to form lasting relationships with users.</p>
-                    <div class="patent-number">US Application: 63/861,850</div>
+            <section id="patents">
+                <h2 class="section-title">Patent-Pending Technologies</h2>
+                <p class="section-subtitle">Revolutionary innovations that enable true AI autonomy with safety, emotional intelligence, and executive decision-making capabilities.</p>
+                
+                <div class="patent-grid">
+                    <div class="patent-card">
+                        <h3>Emotional Intelligence & Learning</h3>
+                        <p>Patent-pending system for persistent emotional memory and statistical confidence analysis that enables AI to form lasting relationships with users and adapt to emotional contexts.</p>
+                        <div class="patent-number">US Application: 63/861,850</div>
+                    </div>
+                    <div class="patent-card">
+                        <h3>Autonomous Executive Agents</h3>
+                        <p>Revolutionary architecture featuring CEO, COO, and CFO AI agents with independent decision-making capabilities and cognitive room environments for complex business operations.</p>
+                        <div class="patent-number">US Application: 63/861,857</div>
+                    </div>
+                    <div class="patent-card">
+                        <h3>AI Identity Protection & Safety</h3>
+                        <p>Comprehensive behavioral monitoring framework with multi-level trust management and graduated response protocols for safe AI operation in autonomous environments.</p>
+                        <div class="patent-number">US Application: 63/861,859</div>
+                    </div>
+                    <div class="patent-card">
+                        <h3>Persistent Personality Governance</h3>
+                        <p>Advanced systems for maintaining consistent AI identity and behavioral patterns across all interactions and operational contexts, ensuring reliable performance.</p>
+                        <div class="patent-number">US Application: 63/861,149</div>
+                    </div>
+                    <div class="patent-card">
+                        <h3>PAST Memory Architecture</h3>
+                        <p>Sophisticated memory governance system enabling AI agents to learn, adapt, and improve from historical interaction patterns while maintaining privacy and security.</p>
+                        <div class="patent-number">US Application: 63/861,168</div>
+                    </div>
+                    <div class="patent-card">
+                        <h3>Predictive Context Engine</h3>
+                        <p>Intelligent context prediction and management system that anticipates user needs and optimizes AI responses in real-time for maximum efficiency and relevance.</p>
+                        <div class="patent-number">US Application: 63/861,171</div>
+                    </div>
                 </div>
-                <div class="patent-card">
-                    <h3>Autonomous Executive Agents</h3>
-                    <p>Revolutionary architecture featuring CEO, COO, and CFO AI agents with independent decision-making capabilities and cognitive room environments.</p>
-                    <div class="patent-number">US Application: 63/861,857</div>
-                </div>
-                <div class="patent-card">
-                    <h3>AI Identity Protection & Safety</h3>
-                    <p>Comprehensive behavioral monitoring framework with multi-level trust management and graduated response protocols for safe AI operation.</p>
-                    <div class="patent-number">US Application: 63/861,859</div>
-                </div>
-                <div class="patent-card">
-                    <h3>Persistent Personality Governance</h3>
-                    <p>Advanced systems for maintaining consistent AI identity and behavioral patterns across all interactions and operational contexts.</p>
-                    <div class="patent-number">US Application: 63/861,149</div>
-                </div>
-                <div class="patent-card">
-                    <h3>PAST Memory Architecture</h3>
-                    <p>Sophisticated memory governance system enabling AI agents to learn, adapt, and improve from historical interaction patterns.</p>
-                    <div class="patent-number">US Application: 63/861,168</div>
-                </div>
-                <div class="patent-card">
-                    <h3>Predictive Context Engine</h3>
-                    <p>Intelligent context prediction and management system that anticipates user needs and optimizes AI responses in real-time.</p>
-                    <div class="patent-number">US Application: 63/861,171</div>
-                </div>
-            </div>
+            </section>
         </section>
 
-        <section class="demo-section">
+        <section class="demo-section" id="demo">
             <div class="container">
                 <h2>Request Demo Access</h2>
-                <p>Experience the future of autonomous AI. Live demonstration available under NDA.</p>
+                <p>Experience the future of autonomous AI. Live demonstration available under NDA for qualified investors and enterprise clients.</p>
                 <form class="demo-form" id="demoForm">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Business Email</label>
+                        <label for="email">Business Email *</label>
                         <input type="email" id="email" name="email" placeholder="Enter your business email" required>
                     </div>
                     <div class="form-group">
-                        <label for="company">Company</label>
+                        <label for="company">Company *</label>
                         <input type="text" id="company" name="company" placeholder="Enter your company name" required>
                     </div>
                     <div class="form-group">
-                        <label for="role">Your Role</label>
-                        <input type="text" id="role" name="role" placeholder="e.g., CEO, CTO, Investor" required>
+                        <label for="role">Your Role *</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select your role</option>
+                            <option value="CEO">CEO</option>
+                            <option value="CTO">CTO</option>
+                            <option value="VP Technology">VP Technology</option>
+                            <option value="Investor">Investor</option>
+                            <option value="Product Manager">Product Manager</option>
+                            <option value="Engineer">Engineer</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="interest">Interest in SKY AI</label>
-                        <textarea id="interest" name="interest" rows="4" placeholder="Tell us about your interest in autonomous AI technology and potential use cases"></textarea>
+                        <textarea id="interest" name="interest" rows="4" placeholder="Tell us about your interest in autonomous AI technology and potential use cases for your organization"></textarea>
                     </div>
-                    <button type="submit" class="btn-primary">Request Demo</button>
+                    <button type="submit" class="btn btn-primary btn-form">Request Demo Access</button>
+                    <div id="successMessage" class="success-message">
+                        Thank you! We'll be in touch within 24 hours to schedule your demo.
+                    </div>
                 </form>
             </div>
         </section>
@@ -391,7 +673,7 @@
     <footer>
         <div class="container">
             <div class="contact-info">
-                <p><strong>Adam Thomas</strong> - Founder</p>
+                <p><strong>Adam Thomas</strong> - Founder & CEO</p>
                 <p>Email: <a href="mailto:seed@skytech.international">seed@skytech.international</a></p>
                 <p>Detroit, Michigan</p>
             </div>
@@ -399,47 +681,216 @@
         </div>
     </footer>
 
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
     <script>
+        // Initialize EmailJS with your public key
+        emailjs.init('XiB9iuNXPHqysTcg9');
+        
+        // Form submission with EmailJS
         document.getElementById('demoForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const successMsg = document.getElementById('successMessage');
+            const form = this;
+            
+            // Add loading state
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = 'Sending Request...';
+            submitBtn.disabled = true;
             
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
-            // Simple mailto for now (you can replace with proper backend later)
-            const subject = 'SKY AI Demo Request from ' + data.name;
-            const body = `Demo Request Details:
+            // Prepare email template parameters
+            const templateParams = {
+                to_email: 'seed@skytech.international',
+                from_name: data.name,
+                from_email: data.email,
+                company: data.company,
+                role: data.role,
+                interest: data.interest || 'Not specified',
+                subject: `SKY AI Demo Request - ${data.company} (${data.role})`,
+                submission_date: new Date().toLocaleString(),
+                reply_to: data.email
+            };
             
-Name: ${data.name}
-Email: ${data.email}
-Company: ${data.company}
-Role: ${data.role}
-Interest: ${data.interest}`;
-            
-            const mailtoLink = `mailto:seed@skytech.international?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            alert('Demo request prepared! Your email client should open with the request details.');
+            // Send email using EmailJS
+            emailjs.send('service_pxt7uta', 'template_ge29avk', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    
+                    // GTM Event Tracking for successful submission
+                    if (typeof dataLayer !== 'undefined') {
+                        dataLayer.push({
+                            'event': 'form_submit_success',
+                            'event_category': 'engagement',
+                            'event_label': 'demo_request',
+                            'company': data.company,
+                            'role': data.role
+                        });
+                    }
+                    
+                    // Show success message
+                    successMsg.innerHTML = `
+                        <strong>Success!</strong> Your demo request has been sent successfully. 
+                        We'll contact you within 24 hours at ${data.email} to schedule your demonstration.
+                    `;
+                    successMsg.style.display = 'block';
+                    submitBtn.style.display = 'none';
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        form.reset();
+                        submitBtn.classList.remove('loading');
+                        submitBtn.textContent = 'Request Demo Access';
+                        submitBtn.style.display = 'block';
+                        submitBtn.disabled = false;
+                        successMsg.style.display = 'none';
+                    }, 5000);
+                    
+                }, function(error) {
+                    console.error('Email send failed:', error);
+                    
+                    // GTM Event Tracking for failed submission
+                    if (typeof dataLayer !== 'undefined') {
+                        dataLayer.push({
+                            'event': 'form_submit_error',
+                            'event_category': 'error',
+                            'event_label': 'demo_request_failed'
+                        });
+                    }
+                    
+                    // Show error message with fallback
+                    successMsg.innerHTML = `
+                        <strong>Oops!</strong> There was an issue sending your request. 
+                        Please email us directly at <a href="mailto:seed@skytech.international?subject=${encodeURIComponent(templateParams.subject)}" style="color: #64b5f6;">seed@skytech.international</a>
+                    `;
+                    successMsg.style.display = 'block';
+                    successMsg.style.background = 'rgba(244, 67, 54, 0.1)';
+                    successMsg.style.borderColor = 'rgba(244, 67, 54, 0.3)';
+                    successMsg.style.color = '#f44336';
+                    
+                    // Reset button state
+                    submitBtn.classList.remove('loading');
+                    submitBtn.textContent = 'Try Again';
+                    submitBtn.disabled = false;
+                    
+                    // Reset error styling after delay
+                    setTimeout(() => {
+                        successMsg.style.background = 'rgba(76, 175, 80, 0.1)';
+                        successMsg.style.borderColor = 'rgba(76, 175, 80, 0.3)';
+                        successMsg.style.color = '#4caf50';
+                        successMsg.style.display = 'none';
+                        submitBtn.textContent = 'Request Demo Access';
+                    }, 5000);
+                });
         });
 
-        // Add some interactive elements
+        // Enhanced card interactions
         document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.patent-card');
+            const cards = document.querySelectorAll('.patent-card, .stat');
             
-            cards.forEach(card => {
+            // Add intersection observer for animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach((card, index) => {
+                // Initial state for animation
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                
+                observer.observe(card);
+                
+                // Enhanced hover effects
                 card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
                 });
                 
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
                 });
             });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add dynamic stats counter animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const animateStats = (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalValue = target.textContent;
+                        
+                        if (finalValue.includes('$')) {
+                            // Handle currency values
+                            const numValue = parseInt(finalValue.replace(/\$|B|M/g, ''));
+                            animateValue(target, 0, numValue, 2000, finalValue.includes('B') ? 'B' : 'M', '$');
+                        } else {
+                            // Handle regular numbers
+                            const numValue = parseInt(finalValue);
+                            animateValue(target, 0, numValue, 2000);
+                        }
+                        
+                        statsObserver.unobserve(target);
+                    }
+                });
+            };
+
+            const statsObserver = new IntersectionObserver(animateStats, { threshold: 0.5 });
+            statNumbers.forEach(stat => statsObserver.observe(stat));
+        });
+
+        function animateValue(element, start, end, duration, suffix = '', prefix = '') {
+            const startTimestamp = performance.now();
+            
+            const step = (timestamp) => {
+                const elapsed = timestamp - startTimestamp;
+                const progress = Math.min(elapsed / duration, 1);
+                const easeProgress = 1 - Math.pow(1 - progress, 3); // Ease out cubic
+                
+                const current = Math.floor(start + (end - start) * easeProgress);
+                element.textContent = prefix + current + suffix;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            };
+            
+            requestAnimationFrame(step);
+        }
+
+        // Add loading animation for better perceived performance
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
         });
     </script>
 </body>
 </html>
-
-#initial website
